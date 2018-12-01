@@ -43,15 +43,15 @@ import com.eclipsesource.v8.V8;
 V8 runtime = V8.createV8Runtime();
 
 Integer res = runtime.executeIntegerScript(
-        "function triple(value, cb) {\n" +
-        "const res = value * 3;\n" +
-        "if( cb ) {\n" +
-            "cb(res);\n" +
-        "} else {\n" +
-            "return res;\n" +
-            "}\n" +
-        "}\n" +        
-        "triple(11)\n");
+    "const triple = (value, cb) => {\n" +
+    "const res = value * 3;\n" +
+    "if( cb ) {\n" +
+        "cb(res);\n" +
+    "} else {\n" +
+        "return res;\n" +
+        "}\n" +
+    "}\n" +
+    "triple(11)\n");
 ```
 The excepted return will be the same as in Swift case, although iOS expoits JavaSciptCore as JS Engine and Java under Android used V8 Engine.
 
