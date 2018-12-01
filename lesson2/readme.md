@@ -110,9 +110,12 @@ context.setObject(consoleLogObject, forKeyedSubscript: "consoleLog" as (NSCopyin
 let res = context.evaluateScript(script)
 
 ```
-See here for the discussion about [unsafeBitCast](https://gist.github.com/JadenGeller/ccc62c4316e8c225c259). The method registration itself happens in [JSContext.setObject](https://developer.apple.com/documentation/javascriptcore/jscontext/1451416-setobject).
+See [this discussion](https://gist.github.com/JadenGeller/ccc62c4316e8c225c259) about <code>unsafeBitCast</code>. The method registration itself happens in [JSContext.setObject](https://developer.apple.com/documentation/javascriptcore/jscontext/1451416-setobject). Needless to say that this technique works only for iOS.
 
-The most completed example of such injection comes imitation of NodeJS where the C++ node firstly instanciate V8 Engine and then adds the method to its context:
+For Java under Android, native method exposition takes an interesting forms. 
+
+
+The most completed example of such injection comes with an imitation of NodeJS where the C++ node firstly instantiates V8 Engine and then adds the method to its context:
 ``` C++
 ```
 
