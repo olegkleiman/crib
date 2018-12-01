@@ -12,21 +12,17 @@
   + git and GitHub
   + CIs for GitHub: travis and others
 5. JS Runtime
-<ul>
-  <li>NodeJS EventLoop and UV</li>
-  <li>V8, JSC, Chakra and other engines</li>
-  <li>Inject C++ objects and functions into JS context: NodeJS</li>
-  <li>NodeJS C++ Add-ons</li>
-  <li>Call C++ from JS</li>
-</ul>
+  + NodeJS EventLoop and UV
+  + V8, JSC, Chakra and other engines
+  + Inject C++ objects and functions into JS context: NodeJS
+  + NodeJS C++ Add-ons
+  + Call C++ from JS
 6. NodeJS under the hood
 <ul>
   <li>
 </ul>
 7. NodeJS and databases. Part 1
-<ul>
-  <li>MySQL</li>
-</ul>
+  + MySQL
 8. NodeJS and databases. Part 2
 <ul>
   <li>Elasticsearch</li>
