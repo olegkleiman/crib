@@ -84,6 +84,7 @@ const log = (message) => {
 ...
 triple(11, log);
 ```
+---
 # Native callbacks
 
 From Engine's point of view there is no difference between native and JS callback. Both are simply required to be registered in the JS context. If for JS callbacks that we saw in the previous section, this happens "automatically", the native callback should be registered programmatically. Moreover, because the callback is just a function, this registration is mostly the same for any function/method exposed from native to JS land.
