@@ -18,9 +18,7 @@
   + NodeJS C++ Add-ons
   + [Call C++ from JS](https://github.com/olegkleiman/crib/blob/master/session5/cpp/readme.md)
 6. NodeJS under the hood
-<ul>
-  <li>
-</ul>
+
 7. NodeJS and databases. Part 1
   + MySQL
 8. NodeJS and databases. Part 2
