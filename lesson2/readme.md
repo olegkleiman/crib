@@ -16,7 +16,7 @@ The problem with this code is that it includes <code>console.log</code> which is
 Let's modify the example in order to run it under iOS:
 ``` Swift
 import JavaScriptCore
-
+...
 let jvm: JSVirtualMachine = JSVirtualMachine()
 let context: JSContext = JSContext(virtualMachine: jvm)!
 let script = """
@@ -34,7 +34,23 @@ let script = """
 
 let res = context.evaluateScript(script)
 ```
-Note using Swift 4 [multistring literal support](https://github.com/apple/swift-evolution/blob/master/proposals/0168-multi-line-string-literals.md) in this modified code.
+Note using Swift 4 [multistring literal support](https://github.com/apple/swift-evolution/blob/master/proposals/0168-multi-line-string-literals.md) in this modified code. Java has the proposal for multiline string support, but under Android, it hasn't been implemented yet, so out Java code might looks like:
+``` Java 
+import com.eclipsesource.v8.V8;
+...
+V8 runtime = V8.createV8Runtime();
+
+Integer res = runtime.executeIntegerScript(
+        "function triple(value, cb) {\n" +
+        "const res = value * 3;\n" +
+        "if( cb ) {\n" +
+            "cb(res);\n" +
+        "} else {\n" +
+            "return res;\n" +
+            "}\n" +
+        "}\n" +        
+        "triple(11)\n");
+```
 
 Because the callback is not passed in this excerpt, <code>if</code> statement is extended here to <code>else</code> block that is simply return the calculated value.
 
