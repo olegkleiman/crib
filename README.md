@@ -12,7 +12,7 @@
   + git and GitHub
   + CIs for GitHub: travis and others
 5. JS Runtime
-  + NodeJS EventLoop and UV
+  + [NodeJS EventLoop and UV](https://github.com/olegkleiman/crib/blob/master/session5/eventLoop/readme.md)
   + V8, JSC, Chakra and other engines
   + Inject C++ objects and functions into JS context: NodeJS
   + NodeJS C++ Add-ons
