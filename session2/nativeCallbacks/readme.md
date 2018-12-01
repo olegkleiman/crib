@@ -29,7 +29,7 @@ See [this discussion](https://gist.github.com/JadenGeller/ccc62c4316e8c225c259) 
 For <b>Java</b> under Android, native method exposition takes interesting forms. 
 Firstly, [JavascriptInterface](https://developer.android.com/reference/android/webkit/JavascriptInterface) is ultimately exposes any method decorated with this attribute to JavaScript. It seems intended for use from WebView, but may have a broader client base.
 
-The most completed example of method injection comes with an imitation of NodeJS where the <b>C++</b> node firstly instantiates V8 Engine and then adds the method to its context. First goes V8 instance (called <i>isolate</i>) preparation stage.
+The most complete example of method injection comes with an imitation of NodeJS where the <b>C++</b> node firstly instantiates V8 Engine and then adds the method to its context. First goes V8 instance (called <i>isolate</i>) preparation stage.
 ``` C++
 #include <v8.h>
 #include "libplatform/libplatform.h"
@@ -58,6 +58,42 @@ int main(int argc, char * argv[]) {
 
     context = CreateContext(isolate);
  }   
+```
+The most interesting things are in <code>CreateContext</code> method:
+``` C++
+v8::Local<v8::Context> CreateContext(v8::Isolate* isolate) {
+    // Create a template for the global object.
+    v8::Local<v8::ObjectTemplate> global = v8::ObjectTemplate::New(isolate);
+    
+    // Bind the global 'print' and '_read_file' functions to the C++ callbacks.
+    global->Set(
+                v8::String::NewFromUtf8(isolate, "_read_file", v8::NewStringType::kNormal)
+                .ToLocalChecked(),
+                v8::FunctionTemplate::New(isolate, ReadFile));
+
+    global->Set(
+                v8::String::NewFromUtf8(isolate, "print", v8::NewStringType::kNormal)
+                .ToLocalChecked(),
+                v8::FunctionTemplate::New(isolate, Print));
+
+    return v8::Context::New(isolate, NULL, global);
+}
+```
+
+And finally C++ methods bound to JS context within the previous excerpt:
+```C++
+// The callback that is invoked by v8 whenever the JavaScript '_read_file'
+// function is called.
+void ReadFile(const v8::FunctionCallbackInfo<v8::Value>& args) {
+...
+}
+...
+// The callback that is invoked by v8 whenever the JavaScript 'print'
+// function is called.  Prints its arguments on stdout separated by
+// spaces and ending with a newline.
+void Print(const v8::FunctionCallbackInfo<v8::Value>& args) {
+...
+}
 ```
 
 This way 
