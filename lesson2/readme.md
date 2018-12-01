@@ -15,6 +15,10 @@ The problem with this code is that it includes <code>console.log</code> which is
 
 Let's modify the example in order to run it under iOS:
 ``` Swift
+import JavaScriptCore
+
+let jvm: JSVirtualMachine = JSVirtualMachine()
+let context: JSContext = JSContext(virtualMachine: jvm)!
 let script = """
                 function triple(value, cb) {
                     const res = value * 3;
