@@ -2,10 +2,6 @@
 
 ## Syllabus
 1. Omnipresent JavaScript
-<dl>
-  <dt>* Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-</dl> 
 2. [JS Callbacks](https://github.com/olegkleiman/crib/blob/master/lesson2/readme.md)
   * Native callbacks
 3. Asynchrony in JS
