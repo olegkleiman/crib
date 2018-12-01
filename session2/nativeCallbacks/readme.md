@@ -29,8 +29,35 @@ See [this discussion](https://gist.github.com/JadenGeller/ccc62c4316e8c225c259) 
 For <b>Java</b> under Android, native method exposition takes interesting forms. 
 Firstly, [JavascriptInterface](https://developer.android.com/reference/android/webkit/JavascriptInterface) is ultimately exposes any method decorated with this attribute to JavaScript. It seems intended for use from WebView, but may have a broader client base.
 
-The most completed example of such injection comes with an imitation of NodeJS where the C++ node firstly instantiates V8 Engine and then adds the method to its context:
+The most completed example of method injection comes with an imitation of NodeJS where the C++ node firstly instantiates V8 Engine and then adds the method to its context. First goes V8 instance (called <i>isolate</i>) preparation stage.
 ``` C++
+#include <v8.h>
+#include "libplatform/libplatform.h"
+
+// v8 stuff
+v8::Isolate* isolate;
+v8::Local<v8::Context> context;
+
+int main(int argc, char * argv[]) {
+
+    v8::V8::InitializeICUDefaultLocation(argv[0]);
+    v8::V8::InitializeExternalStartupData(argv[0]);
+    std::unique_ptr<v8::Platform> platform = v8::platform::NewDefaultPlatform();
+    v8::V8::InitializePlatform(platform.get());
+    
+    v8::V8::Initialize();
+    v8::V8::SetFlagsFromCommandLine(&argc, argv, true);
+    
+    v8::Isolate::CreateParams create_params;
+    create_params.array_buffer_allocator = v8::ArrayBuffer::Allocator::NewDefaultAllocator();
+    
+    isolate = v8::Isolate::New(create_params);
+    
+    v8::Isolate::Scope isolate_scope(isolate);
+    v8::HandleScope handle_scope(isolate);
+
+    context = CreateContext(isolate);
+ }   
 ```
 
 This way 
