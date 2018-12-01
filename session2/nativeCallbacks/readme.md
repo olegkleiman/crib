@@ -29,6 +29,8 @@ See [this discussion](https://gist.github.com/JadenGeller/ccc62c4316e8c225c259) 
 For <b>Java</b> under Android, native method exposition takes interesting forms. 
 Firstly, [JavascriptInterface](https://developer.android.com/reference/android/webkit/JavascriptInterface) is ultimately exposes any method decorated with this attribute to JavaScript. It seems intended for use from WebView, but may have a broader client base.
 
+<b>TBD</b>
+
 The most complete example of method injection comes with an imitation of NodeJS where the <b>C++</b> node firstly instantiates V8 Engine and then adds the method to its context. First goes V8 instance (called <i>isolate</i>) preparation stage.
 ``` C++
 #include <v8.h>
@@ -96,6 +98,5 @@ void Print(const v8::FunctionCallbackInfo<v8::Value>& args) {
 }
 ```
 
-This way 
 
 
