@@ -84,3 +84,5 @@ const log = (message) => {
 ...
 triple(11, log);
 ```
+# Native callbacks
+
