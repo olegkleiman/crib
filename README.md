@@ -3,20 +3,14 @@
 ## Syllabus
 1. Omnipresent JavaScript
 2. [JS Callbacks](https://github.com/olegkleiman/crib/blob/master/lesson2/readme.md)
-<ul>
-  <li>Native callbacks</li>
-<ul>
+  * Native callbacks
 3. Asynchrony in JS
-<ul>
-  <li>setTimer, setInterval, setImmediate</li>
-  <li>JSON and networking </li>
-  <li>fetch</li>
-</ul>
+  * setTimer, setInterval, setImmediate
+  * JSON and networking
+  * fetch
 4. Code complete
-<ul>
-  <li>git and GitHub</li>
-  <li>CIs for GitHub: travis and others</li>
-</ul>
+  + git and GitHub
+  + CIs for GitHub: travis and others
 5. JS Runtime
 <ul>
   <li>NodeJS EventLoop and UV</li>
