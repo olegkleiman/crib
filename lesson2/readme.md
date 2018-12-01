@@ -4,4 +4,4 @@ The script shown in first lesson was extraordinary simple. Now we going to exten
 
 To this extent, it is good practice to check every piece of your code related to the callback: was it was passed, may you call it with or without the parameters you intend to pass out?
 
-The JS function considered in this lesson explicitly checks the passed callback before actually invoke it.
+The JS function [considered](index.js) in this lesson explicitly checks the passed callback before actually invoke it.
