@@ -36,4 +36,6 @@ let res = context.evaluateScript(script)
 ```
 Note using Swift 4 [multistring literal support](https://github.com/apple/swift-evolution/blob/master/proposals/0168-multi-line-string-literals.md) in this modified code.
 
-Because the callback is not passed in this excerpt, <code>if</code> statement is extended here to <code>else</code> block that is simply return the calculated value;
+Because the callback is not passed in this excerpt, <code>if</code> statement is extended here to <code>else</code> block that is simply return the calculated value.
+
+We got around the callback so far, but surely it wasn't our intention for this lesson. On the contrary, we wanted to demonstrate how to use them. So let's provide purely JS callback instead on <code>console.log</code>.
