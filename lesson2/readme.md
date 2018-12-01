@@ -113,7 +113,8 @@ let res = context.evaluateScript(script)
 ```
 See [this discussion](https://gist.github.com/JadenGeller/ccc62c4316e8c225c259) about <code>unsafeBitCast</code>. The method registration itself happens in [JSContext.setObject](https://developer.apple.com/documentation/javascriptcore/jscontext/1451416-setobject). Needless to say that this technique works only for iOS.
 
-For Java under Android, native method exposition takes an interesting forms. 
+For <b>Java</b> under Android, native method exposition takes interesting forms. 
+Firstly, [JavascriptInterface](https://developer.android.com/reference/android/webkit/JavascriptInterface) is ultimately exposes any method decorated with this attribute to JavaScript.
 
 
 The most completed example of such injection comes with an imitation of NodeJS where the C++ node firstly instantiates V8 Engine and then adds the method to its context:
