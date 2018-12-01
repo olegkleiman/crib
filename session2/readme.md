@@ -86,5 +86,5 @@ triple(11, log);
 ```
 ---
 
-Continue to next chapter of this session: [Native callbacks](https://github.com/olegkleiman/crib/blob/master/lesson2/nativeCallbacks/readme.md)
+Continue to next chapter of this session: [Native callbacks](https://github.com/olegkleiman/crib/blob/master/session2/nativeCallbacks/readme.md)
 
