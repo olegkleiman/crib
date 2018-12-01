@@ -16,7 +16,7 @@
   + V8, JSC, Chakra and other engines
   + Inject C++ objects and functions into JS context: NodeJS
   + NodeJS C++ Add-ons
-  + Call C++ from JS
+  + [Call C++ from JS](https://github.com/olegkleiman/crib/blob/master/session5/cpp/readme.md)
 6. NodeJS under the hood
 <ul>
   <li>
