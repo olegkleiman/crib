@@ -34,3 +34,4 @@ let script = """
 
 let res = context.evaluateScript(script)
 ```
+Note using Swift 4 [multistring literal support](https://github.com/apple/swift-evolution/blob/master/proposals/0168-multi-line-string-literals.md) in this modified code.
