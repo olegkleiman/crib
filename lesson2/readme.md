@@ -15,7 +15,7 @@ Note that as least as for NddeLS version 8.9.3, no additional efforts needed to 
 
 The problem with this code is that it includes <code>console.log</code> which is only known to JS Runtime under NodeJS or browser. For other environments, like iOS or Android, we need to mock it somehow.
 
-Let's modify the example in order to run it under iOS:
+Let's modify the example in order to run it under iOS with Swift 4:
 ``` Swift
 import JavaScriptCore
 ...
