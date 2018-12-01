@@ -76,4 +76,11 @@ val script = """
 val res = runtime.executeIntegerScript(script)
 ```
 
-We got around the callback so far, but surely it wasn't our intention for this lesson. On the contrary, we wanted to demonstrate how to use them. So let's provide purely JS callback instead on <code>console.log</code>.
+We got around the callback so far, but surely it wasn't our intention for this lesson. On the contrary, we wanted to demonstrate how to use them. So let's provide purely JS callback instead on <code>console.log</code>
+``` javascript
+const log = (message) => {
+ ...
+}
+...
+triple(11, log);
+```
