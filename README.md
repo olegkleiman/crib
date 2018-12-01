@@ -4,7 +4,7 @@
 1. Omnipresent JavaScript
 2. [JS Callbacks](https://github.com/olegkleiman/crib/blob/master/lesson2/readme.md)
   * Native callbacks
-3. Asynchrony in JS
+3. [Asynchrony in JS](https://github.com/olegkleiman/crib/blob/master/lesson3/readme.md)
   * setTimer, setInterval, setImmediate
   * JSON and networking
   * fetch
