@@ -5,3 +5,28 @@ The script shown in first lesson was extraordinary simple. Now we going to exten
 To this extent, it is good practice to check every piece of your code related to the callback: was it was passed, may you call it with or without the parameters you intend to pass out?
 
 The JS function [considered](index.js) in this lesson explicitly checks the passed callback before actually invoke it.
+Run this example under NodeJS:
+``` bash
+node --inspect-brk index.js
+node index.js
+```
+
+The problem with this code is that it includes <code>console.log</code> which is only known to JS Runtime under NodeJS or browser. For other environments, like iOS or Android, we need to mock it somehow.
+
+Let's modify the example in order to run it under iOS:
+``` Swift
+        let script = """
+                        function triple(value, cb) {
+                            const res = value * 3;
+                            if( cb ) {
+                                cb(res);
+                            } else {
+                                return res;
+                            }
+                        }
+
+                        triple(11);
+        """
+        
+        let res = context.evaluateScript(script)
+```
