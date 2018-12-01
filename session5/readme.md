@@ -7,6 +7,6 @@ JS is single-thread language, meaning that within its execution context only one
 
 1. [NodeJS EventLoop and UV](https://github.com/olegkleiman/crib/blob/master/session5/eventLoop/readme.md)
 2. [V8, JSC, Chakra and others](https://github.com/olegkleiman/crib/blob/master/session5/v8/readme.md)
-3. Inject C++ objects and functions into JS context: NodeJS
+3. [Inject C++ objects and functions into JS context: NodeJS](https://github.com/olegkleiman/crib/blob/master/session5/inject/readme.md)
 4. NodeJS C++ Add-ons
 5. Call C++ from JS
