@@ -55,7 +55,7 @@ Integer res = runtime.executeIntegerScript(
 ```
 The excepted return will be the same as in Swift case, although iOS expoits JavaSciptCore as JS Engine and Java under Android used V8 Engine.
 
-Kotlin in this case is different on by its more modern syntax:
+Kotlin in this case is only different on by its more modern syntax:
 ``` Kotlin
 import com.eclipsesource.v8.V8
 ...
