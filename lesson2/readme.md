@@ -15,18 +15,18 @@ The problem with this code is that it includes <code>console.log</code> which is
 
 Let's modify the example in order to run it under iOS:
 ``` Swift
-        let script = """
-                        function triple(value, cb) {
-                            const res = value * 3;
-                            if( cb ) {
-                                cb(res);
-                            } else {
-                                return res;
-                            }
-                        }
+let script = """
+                function triple(value, cb) {
+                    const res = value * 3;
+                    if( cb ) {
+                        cb(res);
+                    } else {
+                        return res;
+                    }
+                }
 
-                        triple(11);
-        """
-        
-        let res = context.evaluateScript(script)
+                triple(11);
+"""
+
+let res = context.evaluateScript(script)
 ```
