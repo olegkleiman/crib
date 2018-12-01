@@ -61,16 +61,15 @@ import com.eclipsesource.v8.V8
 ...
 val runtime = V8.createV8Runtime()
 val script = """
-        function triple(value, cb) {
-            const res = value * 3;
-            if( cb ) {
-                cb(res);
-            } else {
-                return res;
-            }
+        const triple = (value, cb) => {
+          const res = value * 3;
+          if( cb ) {
+            cb(res);
+          } else {
+            return res;
+          }
         }
         triple(11)
-
 """
 val res = runtime.executeIntegerScript(script)
 ```
