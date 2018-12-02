@@ -31,7 +31,7 @@ Firstly, [JavascriptInterface](https://developer.android.com/reference/android/w
 
 <b>TBD</b>
 
-On other hand, V8 bindings to Java provided by [EclipseSource](https://eclipsesource.com/) enables full access to the engine with build-in functionality for native methods [registration](https://eclipsesource.com/blogs/2015/06/06/registering-java-callbacks-with-j2v8/)
+On other hand, V8 bindings to <b>Java</b> provided by [EclipseSource](https://eclipsesource.com/) enables full access to the engine with build-in functionality for native methods [registration](https://eclipsesource.com/blogs/2015/06/06/registering-java-callbacks-with-j2v8/)
 
 ``` java
 import com.eclipsesource.v8.V8;
