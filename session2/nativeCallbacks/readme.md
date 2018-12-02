@@ -29,7 +29,7 @@ See [this discussion](https://gist.github.com/JadenGeller/ccc62c4316e8c225c259) 
 For <b>Java</b> under Android, native method exposition takes interesting forms. 
 Firstly, [JavascriptInterface](https://developer.android.com/reference/android/webkit/JavascriptInterface) is ultimately exposes any method decorated with this attribute to JavaScript. It seems intended for use from WebView, but may have a broader client base.
 
-<b>TBD</b>
+Practical example of WebView powered with JavaScript is [provided](https://developer.android.com/guide/webapps/webview) by Google.
 
 On other hand, V8 bindings to <b>Java</b> provided by [EclipseSource](https://eclipsesource.com/) enables full access to the engine with build-in functionality for native methods [registration](https://eclipsesource.com/blogs/2015/06/06/registering-java-callbacks-with-j2v8/)
 
