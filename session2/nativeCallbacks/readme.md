@@ -31,6 +31,30 @@ Firstly, [JavascriptInterface](https://developer.android.com/reference/android/w
 
 <b>TBD</b>
 
+On other hand, V8 bindings to Java provided by [EclipseSource](https://eclipsesource.com/) enables full access to the engine with build-in functionality for native methods [registration](https://eclipsesource.com/blogs/2015/06/06/registering-java-callbacks-with-j2v8/)
+
+``` java
+import com.eclipsesource.v8.V8;
+...
+V8 runtime = V8.createV8Runtime();
+JavaVoidCallback callback = new JavaVoidCallback() {
+public void invoke(final V8Object receiver, final V8Array parameters) {
+
+    if (parameters.length() > 0) {
+        Object arg1 = parameters.get(0);
+        System.out.println(arg1);
+        if (arg1 instanceof Releasable) {
+            ((Releasable)arg1).release();
+        }
+//                    consoleLog(parameters);
+    }
+
+}
+};
+runtime.registerJavaMethod(callback, "log");
+runtime.executeVoidScript("log(33, 'thirty three');\n");
+```
+
 The most complete example of method injection comes with an imitation of NodeJS where the <b>C++</b> node firstly instantiates V8 Engine and then adds the method to its context. First goes V8 instance (called <i>isolate</i>) preparation stage.
 ``` C++
 #include <v8.h>
