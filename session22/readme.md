@@ -78,11 +78,11 @@ jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = "4.10.2"
-}
+//task wrapper(type: Wrapper) {
+//    gradleVersion = "4.10.2"
+//}
 ```
-When you run <code>$ gradle</code> this time, under <build> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output, but most important artifact produced there is <code><project_name>.jar</code> file that is valid for usual Java invocation:
+When you run <code>$ gradle clean build</code> this time, under <build> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output, but most important artifact produced there is <code><project_name>.jar</code> file that is valid for usual Java invocation:
 
 <code>java -jar <project_name>.jar
 
