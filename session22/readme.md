@@ -19,3 +19,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 }
 ```
+
+Just build the project with defaulf file structure as
+<code>$gradle</code>
+and observe produced <code>build</code> directory.
