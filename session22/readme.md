@@ -82,8 +82,8 @@ jar {
 //    gradleVersion = "4.10.2"
 //}
 ```
-When you run <code>$ gradle clean build</code> this time, under <build> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output, but most important artifact produced there is <code><project_name>.jar</code> file that is valid for usual Java invocation:
+When you run <code>$ gradle clean build</code> this time, under <code>build/classes/kotlin</code> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output, but most important artifact produced there is under <code>build/lib</code> folder. It is <project_name>.jar</code> fat jar (i.e. jar including all dependencies) that is valid for usual Java invocation:
 
-<code>java -jar <project_name>.jar
+<code>java -jar ./build/libs/<project_name>.jar
 
 
