@@ -44,7 +44,7 @@ var kgjs = function (_, Kotlin) {
   return _;
 }(typeof kgjs === 'undefined' ? {} : kgjs, kotlin);
 ```
-In an additional produced diretory (<code>build/classes/kotlin/main/lib</code>) there is <code>kotlin.js</code> file that is Kotlin Runtime to JS. Both files needs to be included in HTML:
+In an additionally produced directory (<code>build/classes/kotlin/main/lib</code>) there is <code>kotlin.js</code> file that is Kotlin Runtime to JS. Both files needs to be included in HTML:
 ``` html
 <script type="text/javascript" src="out/production/kjs/lib/kotlin.js"></script>
 <script type="text/javascript" src="out/production/kjs/kjs.js"></script>
