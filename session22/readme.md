@@ -44,8 +44,34 @@ var kgjs = function (_, Kotlin) {
   return _;
 }(typeof kgjs === 'undefined' ? {} : kgjs, kotlin);
 ```
-Additional produced diretory - <code>build/classes/kotlin/main/lib</code> there is <code>kotlin.js</code> file that is Kotlin Runtime to JS. Both files needs to be included in HTML:
+In an additional produced diretory (<code>build/classes/kotlin/main/lib</code>) there is <code>kotlin.js</code> file that is Kotlin Runtime to JS. Both files needs to be included in HTML:
 ``` html
 <script type="text/javascript" src="out/production/kjs/lib/kotlin.js"></script>
 <script type="text/javascript" src="out/production/kjs/kjs.js"></script>
+```
+
+Let's modify our gradle to target JVM from the same Kotlin code:
+``` gradle
+buildscript {
+    ext.kotlin_version = '1.3.10'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.okey.kgjs.main'
+    }
+
+    // This line of code recursively collects and copies all of a project's files
+    // and adds them to the JAR itself. One can extend this task, to skip certain
+    // files or particular types at will
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
 ```
