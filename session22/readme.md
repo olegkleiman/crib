@@ -61,18 +61,22 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
-apply plugin: 'java'
 apply plugin: 'kotlin'
+apply plugin: 'application'
 
 jar {
     manifest {
-        attributes 'Main-Class': 'com.okey.kgjs.main'
+        attributes 'Main-Class': 'demo.HelloWorldKt'
     }
 
     // This line of code recursively collects and copies all of a project's files
     // and adds them to the JAR itself. One can extend this task, to skip certain
     // files or particular types at will
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "4.10.2"
 }
 ```
 When you run <code>$ gradle</code> this time, under <build> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output, but most important artifact produced there is <code><project_name>.jar</code> file that is valid for usual Java invocation:
