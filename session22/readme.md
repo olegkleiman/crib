@@ -75,4 +75,8 @@ jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 ```
-When you run <code>$ gradle</code> this time, under <build> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output
+When you run <code>$ gradle</code> this time, under <build> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output, but most important artifact produced there is <code><project_name>.jar</code> file that is valid for usual Java invocation:
+
+<code>java -jar <project_name>.jar
+
+
