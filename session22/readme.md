@@ -85,5 +85,7 @@ jar {
 When you run <code>$ gradle clean build</code> this time, under <code>build/classes/kotlin</code> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output, but most important artifact produced there is under <code>build/lib</code> folder. It is <project_name>.jar</code> fat jar (i.e. jar including all dependencies) that is valid for usual Java invocation:
 
 <code>java -jar ./build/libs/<project_name>.jar
+---
 
+Continue to next chapter of this session: [Kotlin for Web](https://github.com/olegkleiman/crib/blob/master/session22/KotlinForWeb/readme.md)
 
