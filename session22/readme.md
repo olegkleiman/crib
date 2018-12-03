@@ -7,6 +7,9 @@ The following gradle targets JS by utilizing <code>kotlin2js</code> plugin:
 buildscript {
     ext.kotlin_version = '1.3.10'
 }
+plugins {
+    id 'kotlin2js' version '1.3.0'
+}
 
 repositories {
     mavenCentral()
