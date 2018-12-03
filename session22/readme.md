@@ -7,12 +7,12 @@ The following gradle targets JS by utilizing <code>kotlin2js</code> plugin:
 buildscript {
     ext.kotlin_version = '1.3.10'
 }
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-js"
 }
 ```
