@@ -26,7 +26,7 @@ Just build the project with defaulf file structure as
 
 and observe produced <code>build</code> directory.
 
-Under this directory: <code>build/classes/kotlin/main</code> you'll find the JS file with a name corresponding to your project. For out simple Kotlin input, the produced JS looks like:
+Under this directory <code>build/classes/kotlin/main</code> you'll find the JS file with a name corresponding to your project. For out simple Kotlin input, the produced JS looks like:
 ``` javascript
 if (typeof kotlin === 'undefined') {
   throw new Error("Error loading module 'kgjs'. Its dependency 'kotlin' was not found. Please, check whether 'kotlin' is loaded prior to 'kgjs'.");
@@ -43,4 +43,9 @@ var kgjs = function (_, Kotlin) {
   Kotlin.defineModule('kgjs', _);
   return _;
 }(typeof kgjs === 'undefined' ? {} : kgjs, kotlin);
+```
+Additional produced diretory - <code>build/classes/kotlin/main/lib</code> there is <code>kotlin.js</code> file that is Kotlin Runtime to JS. Both files needs to be included in HTML:
+``` html
+<script type="text/javascript" src="out/production/kjs/lib/kotlin.js"></script>
+<script type="text/javascript" src="out/production/kjs/kjs.js"></script>
 ```
