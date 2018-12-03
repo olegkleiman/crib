@@ -75,3 +75,4 @@ jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 ```
+When you run <code>$ gradle</code> this time, under <build> directory you'll find another output. <code>MainKt.class</code> is produced this time that is valid java output
