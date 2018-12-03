@@ -65,9 +65,11 @@ buildscript {
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
+mainClassName = 'demo.MainKt'
+
 jar {
     manifest {
-        attributes 'Main-Class': 'demo.HelloWorldKt'
+        attributes 'Main-Class': 'demo.MainKt'
     }
 
     // This line of code recursively collects and copies all of a project's files
