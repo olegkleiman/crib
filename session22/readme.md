@@ -61,6 +61,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
+
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
