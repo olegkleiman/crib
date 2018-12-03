@@ -22,6 +22,25 @@ dependencies {
 
 Just build the project with defaulf file structure as
 
-<code>$gradle</code>
+<code>$ gradle</code>
 
 and observe produced <code>build</code> directory.
+
+Under this directory: <code>build/classes/kotlin/main</code> you'll find the JS file with a name corresponding to your project. For out simple Kotlin input, the produced JS looks like:
+``` javascript
+if (typeof kotlin === 'undefined') {
+  throw new Error("Error loading module 'kgjs'. Its dependency 'kotlin' was not found. Please, check whether 'kotlin' is loaded prior to 'kgjs'.");
+}
+var kgjs = function (_, Kotlin) {
+  'use strict';
+  var println = Kotlin.kotlin.io.println_s8jyv4$;
+  function main(args) {
+    var message = 'Hello Kotlin!';
+    println(message);
+  }
+  _.main_kand9s$ = main;
+  main([]);
+  Kotlin.defineModule('kgjs', _);
+  return _;
+}(typeof kgjs === 'undefined' ? {} : kgjs, kotlin);
+```
