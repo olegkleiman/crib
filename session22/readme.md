@@ -86,6 +86,9 @@ When you run <code>$ gradle clean build</code> this time, under <code>build/clas
 ``` bash
 java -jar ./build/libs/<project_name>.jar
 ```
+
+More detailed discussion about congiguring Kotling for JVM is published [here](https://medium.com/@preslavrachev/kotlin-basics-create-executable-kotlin-jars-using-gradle-d17e9a8384b9)
+
 ---
 
 Continue to next chapter of this session: [Kotlin for Web](https://github.com/olegkleiman/crib/blob/master/session22/KotlinForWeb/readme.md)
