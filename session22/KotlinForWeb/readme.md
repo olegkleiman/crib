@@ -6,4 +6,4 @@ import kotlin.browser.window
 - add webpack to gradle (com.moowork.node plugin?) and change src='index.js' to src='bundle.js' in index.html
 
 ---
-Continue to Kotlin for Mobile
+Continue to [Kotlin for Mobile](https://github.com/olegkleiman/crib/blob/master/session22/KotlinForMobile/readme.md)
