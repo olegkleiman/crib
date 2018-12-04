@@ -92,5 +92,6 @@ More detailed discussion about congiguring Kotling for JVM is published [here](h
 ---
 
 Continue to next chapter of this session: [Kotlin for Web](https://github.com/olegkleiman/crib/blob/master/session22/KotlinForWeb/readme.md)
+
 Continue to chapter [Kotlin for Mobile](Continue to [Kotlin for Mobile](https://github.com/olegkleiman/crib/blob/master/session22/KotlinForMobile/readme.md)
 
