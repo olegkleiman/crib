@@ -2,7 +2,7 @@
 
 ## Syllabus
 1. Omnipresent JavaScript
-2. [JS Callbacks](https://github.com/olegkleiman/crib/blob/master/lesson2/readme.md)
+2. [JS Callbacks](https://github.com/olegkleiman/crib/blob/master/session2/readme.md)
   * [Native callbacks](https://github.com/olegkleiman/crib/blob/master/session2/nativeCallbacks/readme.md)
 3. [Asynchrony in JS](https://github.com/olegkleiman/crib/blob/master/session3/readme.md)
   * setTimer, setInterval, setImmediate
