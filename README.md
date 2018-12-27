@@ -25,31 +25,23 @@
   + Elasticsearch
   + Realtime updates and Google Firebase
 9. Going Native
-  <ul>
-  <li>Call JS from Native</li>
-  <li>9.2. From Android (Java and Kotlin)</li>
-  <li>9.3 From iOS (Swift)</li>
-  </ul>
+  + 9.1Call JS from Native
+  + 9.2. From Android (Java and Kotlin)
+  + 9.3 From iOS (Swift)
 10. ES6 and beyond
   + Promises
   + Arrow functions and <i>this</i>
   + Classes
 11. Frameworks for Web. Part 1.
-  <ul>
-  <li>CSS and Bootstrap</li>
-  <li>DOM</li>
-  <li>Canvas and drawing, WebGL</li>
-  </ul>
+  + CSS and Bootstrap
+  + DOM
+  + Canvas and drawing, WebGL
 12. Framework for Web. Part 2
-<ul>
-  <li>Webpack</li>
-  <li>NPM</li>
-  <li>Babel</li>
-</ul>
+  + Webpack
+  + NPM
+  + Babel
 13. Frameworks for Web. Part 3
-<ul>
-  <li>React</li>
-  <li>Comparing React to other approaches: Angular.js, Vue.js and NativeScript</li>
-</ul>
+  + React
+  + Comparing React to other approaches: Angular.js, Vue.js and NativeScript
 14. OpenCV
  + Install on iOS
