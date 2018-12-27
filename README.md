@@ -22,10 +22,8 @@
 7. NodeJS and databases. Part 1
   + MySQL
 8. NodeJS and databases. Part 2
-<ul>
-  <li>Elasticsearch</li>
-  <li>Realtime updates and Google Firebase</li>
-</ul>
+  + Elasticsearch
+  + Realtime updates and Google Firebase
 9. Going Native
   <ul>
   <li>Call JS from Native</li>
@@ -49,7 +47,7 @@
   <li>NPM</li>
   <li>Babel</li>
 </ul>
-13.  Frameworks for Web. Part 3
+13. Frameworks for Web. Part 3
 <ul>
   <li>React</li>
   <li>Comparing React to other approaches: Angular.js, Vue.js and NativeScript</li>
