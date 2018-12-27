@@ -34,7 +34,6 @@
   + Promises
   + Arrow functions and <i>this</i>
   + Classes
-</ul>
 11. Frameworks for Web. Part 1.
   <ul>
   <li>CSS and Bootstrap</li>
