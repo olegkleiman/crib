@@ -54,3 +54,5 @@
   <li>React</li>
   <li>Comparing React to other approaches: Angular.js, Vue.js and NativeScript</li>
 </ul>
+14. OpenCV
+ + Install on iOS
