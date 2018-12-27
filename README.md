@@ -33,10 +33,9 @@
   <li>9.3 From iOS (Swift)</li>
   </ul>
 10. ES6 and beyond
-<ul>
-  <li>Promises</li>
-  <li>Arrow functions and this</li>
-  <li>Classes</li>
+  + Promises
+  + Arrow functions and <i>this</i>
+  + Classes
 </ul>
 11. Frameworks for Web. Part 1.
   <ul>
