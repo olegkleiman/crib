@@ -2,7 +2,7 @@
 
 ## 1. Wrapping OpenCV as C++ librarty with Objective-C
 
-Because OpenCV is C++ libarary and there is no bridging between Swift and C++, usually, OpenCV functionality is wrapped in Objective C header file that exposes only pure C functions and uses OpenCV methods internally
+Because OpenCV is C++ libarary and there is no bridging between Swift and C++, OpenCV functionality is usually wrapped in Objective C header file that exposes only pure C functions and uses OpenCV methods internally
 ``` Objective-C
 @interface OpenCVWrapper : NSObject
 - (void) isThisWorking;
