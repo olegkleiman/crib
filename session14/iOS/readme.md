@@ -1,6 +1,6 @@
 # Install iOS (Swift)
 
-Usually, OpenCV functionality is wrapped in Objective C header file. Since there is no bridging between Swift and C++, that file exposes only pure C functions and uses OpenCV methods internally
+Because OpenCV is C++ libarary and there is no bridging between Swift and C++, usually, OpenCV functionality is wrapped in Objective C header file that exposes only pure C functions and uses OpenCV methods internally
 ``` Objective-C
 @interface OpenCVWrapper : NSObject
 - (void) isThisWorking;
@@ -8,4 +8,7 @@ Usually, OpenCV functionality is wrapped in Objective C header file. Since there
 //+ (cv::Mat) cvMatFromUIImage:(UIImage *)image;
 //+ (UIImage *) UIImageFromCVMat:(cv::Mat)cvMat;
 @end
+```
+Such a header does not mention OpenCV. It comes to play only at implementation level:
+``` Objective-C
 ```
