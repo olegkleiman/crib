@@ -48,4 +48,4 @@ Obviously, images that passed from Swift should be firstly converted into OpenCV
     return cvMat;
 }
 ```
-The main point of interest here is [CGBitmapContextCreate](https://developer.apple.com/documentation/coregraphics/1455939-cgbitmapcontextcreate?language=objc) function.
+The main point of interest here is [CGBitmapContextCreate](https://developer.apple.com/documentation/coregraphics/1455939-cgbitmapcontextcreate?language=objc) function that actually converts the image data from colorspace to matrix data according to various parameters.
