@@ -15,10 +15,10 @@ Such a header does not mention OpenCV. OpenCV comes to play only at the implemen
 - (void) isThisWorking {
      cout << "Hey" << endl;
 }
-+ (cv::Mat) cvMatFromUIImage:(UIImage *)image {
++ (cv::Mat) cvMatFromUIImage:(UIImage *) image {
 //...
 }
-+ (UIImage *)UIImageFromCVMat:(cv::Mat)cvMat {
++ (UIImage *) UIImageFromCVMat:(cv::Mat) cvMat {
 //...
 }
 ```
