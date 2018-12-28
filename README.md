@@ -44,4 +44,4 @@
   + React
   + Comparing React to other approaches: Angular.js, Vue.js and NativeScript
 14. OpenCV
-   * [Install on iOS (Swift)](https://github.com/olegkleiman/crib/blob/master/session14/iOS/readme.md)
+   * [Use from iOS (Swift)](https://github.com/olegkleiman/crib/blob/master/session14/iOS/readme.md)
