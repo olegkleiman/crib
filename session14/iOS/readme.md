@@ -13,6 +13,13 @@ Because OpenCV is C++ libarary and there is no bridging between Swift and C++, O
 ```
 Such a header does not mention OpenCV. OpenCV comes to play only at the implementation level that should be written in **Objective-C++** (.mm file extension)
 ``` Objective-C++
+#import <opencv2/opencv.hpp>
+#import "OpenCVWrapper.h"
+#import <UIKit/UIKit.h>
+
+using namespace std;
+using namespace cv;
+
 @implementation OpenCVWrapper
 - (void) isThisWorking: (UIImage *)image  {
      cout << "Hey" << endl;
