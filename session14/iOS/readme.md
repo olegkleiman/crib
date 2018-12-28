@@ -12,13 +12,14 @@ Because OpenCV is C++ libarary and there is no bridging between Swift and C++, u
 Such a header does not mention OpenCV. OpenCV comes to play only at the implementation level that should be written in **Objective-C++** (.mm file extension)
 ``` Objective-C++
 @implementation OpenCVWrapper
-- (void) isThisWorking {
+- (void) isThisWorking: (UIImage *)image  {
      cout << "Hey" << endl;
+     cv:Mat mat = [self cvMatFromUIImage:image];
 }
-+ (cv::Mat) cvMatFromUIImage:(UIImage *) image {
+- (cv::Mat) cvMatFromUIImage:(UIImage *) image {
 //...
 }
-+ (UIImage *) UIImageFromCVMat:(cv::Mat) cvMat {
+- (UIImage *) UIImageFromCVMat:(cv::Mat) cvMat {
 //...
 }
 ```
@@ -26,7 +27,7 @@ This way Swift is able to call methods in OpenCV library
 
 Obviously, images that passed from Swift should be firstly converted into OpenCV structures and primarily into *Mat*. This is done with a help of *Core Graphics* framework:
 ``` Objective-C++
-+ (cv::Mat) cvMatFromUIImage:(UIImage *)image {
+- (cv::Mat) cvMatFromUIImage:(UIImage *)image {
     
     //cv::Mat src = [Conversion cvMatWithImage:source];
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
