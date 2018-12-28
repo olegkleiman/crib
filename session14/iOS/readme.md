@@ -1,4 +1,4 @@
-# Install iOS (Swift)
+# Use from iOS (Swift)
 
 ## 1. Wrapping OpenCV as C++ librarty with Objective-C
 
