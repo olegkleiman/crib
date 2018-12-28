@@ -1,5 +1,7 @@
 # Install iOS (Swift)
 
+## Wrapping OpenCV as C++ librarty with Objective-C
+
 Because OpenCV is C++ libarary and there is no bridging between Swift and C++, usually, OpenCV functionality is wrapped in Objective C header file that exposes only pure C functions and uses OpenCV methods internally
 ``` Objective-C
 @interface OpenCVWrapper : NSObject
@@ -29,6 +31,8 @@ let image = UIImage(named: "amino.png")
 let openCVWrapper = OpenCVWrapper()
 openCVWrapper.isThisWorking(image!)
 ```
+
+## Converting UIImage to Mat back and forth
 
 Obviously, images that passed from Swift should be firstly converted into OpenCV structures and primarily into *Mat*. This is done with a help of *Core Graphics* framework:
 ``` Objective-C++
