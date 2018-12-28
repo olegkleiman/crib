@@ -71,6 +71,11 @@ The main point of interest here is [CGBitmapContextCreate](https://developer.app
 
 Having a wrapper compiled with OpenCV, the transformations are permormed as a methods of such wrapper. For example, converting an image to grey (only one channel)
 ``` Objective-C++
+#import <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
 - (UIImage *) toGrey: (UIImage *)image {
     
     Mat mat = [self cvMatFromUIImage:image];
