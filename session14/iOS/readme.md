@@ -25,7 +25,7 @@ Such a header does not mention OpenCV. OpenCV comes to play only at the implemen
 //...
 }
 ```
-After that, Swift is able to call methods in OpenCV library:
+After that, Swift is able to call methods in the wrapper and the later will actually translate the invocation to OpenCV library:
 ``` Swift
 let image = UIImage(named: "amino.png")
 let openCVWrapper = OpenCVWrapper()
