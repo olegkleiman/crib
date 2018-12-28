@@ -66,3 +66,22 @@ Obviously, images that passed from Swift should be firstly converted into OpenCV
 }
 ```
 The main point of interest here is [CGBitmapContextCreate](https://developer.apple.com/documentation/coregraphics/1455939-cgbitmapcontextcreate?language=objc) function that actually converts the image data from colorspace to matrix data according to various parameters.
+
+## 3. Image transformations
+
+Having a wrapper compiled with OpenCV, the transformations are permormed as a methods of such wrapper. For example, converting an image to grey (only one channel)
+``` Objective-C++
+- (UIImage *) toGrey: (UIImage *)image {
+    
+    Mat mat = [self cvMatFromUIImage:image];
+    int channels = mat.channels();
+    cout << "Origin matrix has " << channels << " channels" << endl;
+    
+    Mat greyMat;
+    cvtColor(mat, greyMat, CV_BGR2GRAY);
+    UIImage *greyImage = [self UIImageFromCVMat:greyMat];
+    channels = greyMat.channels();
+    cout << "Grey matrix has " << channels << " channels" << endl;
+    return greyImage;
+}
+```
