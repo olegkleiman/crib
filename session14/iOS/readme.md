@@ -24,4 +24,28 @@ Such a header does not mention OpenCV. OpenCV comes to play only at the implemen
 ```
 This way Swift is able to call methods in OpenCV library
 
-Obviously, images that passed from Swift should be firstly converted into OpenCV structures and primarily into *Mat*. This is done with a help of *Core Graphics* framework
+Obviously, images that passed from Swift should be firstly converted into OpenCV structures and primarily into *Mat*. This is done with a help of *Core Graphics* framework:
+``` Objective-C++
++ (cv::Mat) cvMatFromUIImage:(UIImage *)image {
+    
+    //cv::Mat src = [Conversion cvMatWithImage:source];
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
+    CGFloat cols = image.size.width;
+    CGFloat rows = image.size.height;
+    
+    cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels (color channels + alpha)
+    CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to  data
+                                                    cols,                       // Width of bitmap
+                                                    rows,                       // Height of bitmap
+                                                    8,                          // Bits per component
+                                                    cvMat.step[0],              // Bytes per row
+                                                    colorSpace,                 // Colorspace
+                                                    kCGImageAlphaNoneSkipLast |
+                                                    kCGBitmapByteOrderDefault); // Bitmap info flags
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
+    CGContextRelease(contextRef);
+    
+    return cvMat;
+}
+```
+The main point of interest here is [CGBitmapContextCreate](https://developer.apple.com/documentation/coregraphics/1455939-cgbitmapcontextcreate?language=objc) function.
