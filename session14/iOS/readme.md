@@ -9,6 +9,6 @@ Because OpenCV is C++ libarary and there is no bridging between Swift and C++, u
 //+ (UIImage *) UIImageFromCVMat:(cv::Mat)cvMat;
 @end
 ```
-Such a header does not mention OpenCV. It comes to play only at implementation level:
+Such a header does not mention OpenCV. It comes to play only at the implementation level:
 ``` Objective-C
 ```
