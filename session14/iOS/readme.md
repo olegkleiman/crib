@@ -5,8 +5,8 @@ Because OpenCV is C++ libarary and there is no bridging between Swift and C++, u
 @interface OpenCVWrapper : NSObject
 - (void) isThisWorking;
 // These methods are not exposed since they use OpenCV (as C++ library)
-//+ (cv::Mat) cvMatFromUIImage:(UIImage *)image;
-//+ (UIImage *) UIImageFromCVMat:(cv::Mat)cvMat;
+//- (cv::Mat) cvMatFromUIImage:(UIImage *)image;
+//- (UIImage *) UIImageFromCVMat:(cv::Mat)cvMat;
 @end
 ```
 Such a header does not mention OpenCV. OpenCV comes to play only at the implementation level that should be written in **Objective-C++** (.mm file extension)
@@ -23,7 +23,12 @@ Such a header does not mention OpenCV. OpenCV comes to play only at the implemen
 //...
 }
 ```
-This way Swift is able to call methods in OpenCV library
+After that, Swift is able to call methods in OpenCV library:
+``` Swift
+let image = UIImage(named: "amino.png")
+let openCVWrapper = OpenCVWrapper()
+openCVWrapper.isThisWorking(image!)
+```
 
 Obviously, images that passed from Swift should be firstly converted into OpenCV structures and primarily into *Mat*. This is done with a help of *Core Graphics* framework:
 ``` Objective-C++
