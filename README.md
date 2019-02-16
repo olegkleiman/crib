@@ -31,7 +31,7 @@
 10. ES6 and beyond
   + Promises
   + Arrow functions and <i>this</i>
-  + Classes
+  + [Classes](https://github.com/olegkleiman/crib/blob/master/session10/classes/readme.md)
 11. Frameworks for Web. Part 1.
   + CSS and Bootstrap
   + DOM
