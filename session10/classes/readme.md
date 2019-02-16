@@ -27,5 +27,20 @@ Along with a <i>private methods</i>, the support for a <i>class properties</i> i
 
 
 ## 2. Inheritance
+``` JS
+class Marker extends Point {
+  #text;
+  
+  constructor(text) {
+    super(0, 0);
+
+    this.#text = text;
+  }
+
+  get text() {
+    return this.#text;
+  }
+};
+```
 
 ## 3. Polymorphism
