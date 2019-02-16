@@ -41,7 +41,7 @@
   + NPM
   + Babel
 13. Frameworks for Web. Part 3
-  + React
+  + [React](https://github.com/olegkleiman/crib/blob/master/session13/react/readme.md)
   + Comparing React to other approaches: Angular.js, Vue.js and NativeScript
 14. OpenCV
    * [Use from iOS (Swift)](https://github.com/olegkleiman/crib/blob/master/session14/iOS/readme.md)
