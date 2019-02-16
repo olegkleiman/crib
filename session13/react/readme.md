@@ -1,6 +1,6 @@
 # React
 
-React declares itself as a component-based framework, but these components definitely play a minor role in the main play of React: rendering. Probably, it is possible to express rendering with other constructs, but it seems convenient to base the presentational framework on a component concept, thus to model the UI with a tree of independent blocks where each of them is responsible for its own piece of the screen. 
+React declares itself as a component-based framework but these components definitely play a minor role in the main play of React: rendering. Probably, it is possible to express rendering with other constructs, but it seems convenient to base the presentational framework on a component concept, thus to model the UI with a tree of independent blocks where each of them is responsible for its own piece of the screen. 
 
 The most important thing is that each component has the required <i>render()</i> method where it defines how its part of the screen looks. React is orchestrating these renderers with the focal mechanism called reconciliation that without a doubt is a central part of this framework. 
 
