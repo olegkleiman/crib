@@ -51,7 +51,8 @@ console.log(`${marker.text}`);
 Following the previous example, pay attention to that <i>x</i> is a method of a base class:
 ``` JS
 const marker = new Marker('my marker');
-console.log(`${marker.text}  ${marker.x}`); 
 console.log(marker instanceof Point); // true
+console.log(`${marker.text}  ${marker.x}`); 
+
 
 ```
