@@ -13,7 +13,7 @@ class Point {
     this.#y = y;
   }
   
-  get x() {
+  get x() { // getter, used here to expose private property
     return this.#x;
   }
 
