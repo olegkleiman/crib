@@ -10,5 +10,8 @@ Classic React component was expressed with [JS classes](https://github.com/olegk
 
 ## Functional components
 When JSX sees the code like 
+```
+ return <MyComponent />
+```
  
 
