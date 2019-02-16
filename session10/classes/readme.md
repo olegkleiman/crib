@@ -1,6 +1,6 @@
 # JS Classes
 
-JS classes are designed to mimic the OO constructs whenever is possible. This includes encapsulation, inheritance and polymorpism.
+JS classes are designed to mimic the OO constructs whenever is possible. This includes encapsulation, inheritance, and polymorphism. Remember, however, that all this JS constructs are just syntax sugar.
 
 ## 1. Encapsulation
 ``` JS
