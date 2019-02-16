@@ -15,7 +15,7 @@ class Point {
 
 };
 ```
-Along with a <i>private methods</i>, the support for <i>class properties</i> is TC39 proposal and only supported by Babel 7 with [@babel/plugin-proposal-class-properties plugin](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties) and [@babel/plugin-proposal-private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods).
+Along with a <i>private methods</i>, the support for a <i>class properties</i> is TC39 proposal and only supported only by Babel 7 with [@babel/plugin-proposal-class-properties plugin](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties) and [@babel/plugin-proposal-private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods).
 
 
 ## 2. Inheritance
