@@ -8,3 +8,7 @@ Reconciliation may render the components' output to HTML but Android, iOS or Occ
 
 Classic React component was expressed with [JS classes](https://github.com/olegkleiman/crib/blob/master/session10/classes/readme.md) but for the last two years React team was working hard to make it possible to make functional components that are regular JS functions a first-class citizen in React realm.
 
+## Functional components
+When JSX sees the code like 
+ 
+
