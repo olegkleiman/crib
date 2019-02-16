@@ -41,6 +41,10 @@ class Marker extends Point {
     return this.#text;
   }
 };
+
+const marker = new Marker('my marker');
+console.log(`${marker.text}  ${marker.x}`); // Pay attention that x is a method of base class
+
 ```
 
 ## 3. Polymorphism
