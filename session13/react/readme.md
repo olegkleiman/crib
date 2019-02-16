@@ -13,5 +13,6 @@ When JSX sees the code like
 ``` JSX
  return <MyComponent />
 ```
+it ultimately tries to instantiate something that has a <i>render</i> method. This something maybe not a class..
  
 
