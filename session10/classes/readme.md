@@ -43,12 +43,12 @@ class Marker extends Point {
 };
 
 const marker = new Marker('my marker');
-console.log(`${marker.text}  ${marker.x}`); // Pay attention that x is a method of base class
+console.log(`${marker.text}`); 
 
 ```
 
 ## 3. Polymorphism
-Following the previous example, pay attention that <i>x</i> is a method of base class:
+Following the previous example, pay attention to that <i>x</i> is a method of a base class:
 ``` JS
 const marker = new Marker('my marker');
 console.log(`${marker.text}  ${marker.x}`); 
