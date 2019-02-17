@@ -1,6 +1,6 @@
 # *this* and fat arrow functions
 
-Functions are the first-class objects ([?](https://en.wikipedia.org/wiki/First-class_citizen) in JS. In particular, this means that function passed as an argument to another function is undistinguished from any other object.
+Functions are the first-class objects ([[?]](https://en.wikipedia.org/wiki/First-class_citizen) in JS. In particular, this means that function passed as an argument to another function is undistinguished from any other object.
 ``` JS
 class Point {
   constructor(x, y) {
