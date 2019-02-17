@@ -13,6 +13,11 @@ When JSX sees the code like
 ``` JSX
  return <MyComponent />
 ```
-it ultimately tries to instantiate something that has a <i>render()</i> method. This something shouldn't be a JS class.
+it transpiles this code (with a help of Babel) to 
+``` js
+React.createElement()
+```
+
+Then it ultimately tries to instantiate something that has a <i>render()</i> method. This something shouldn't be a JS class.
  
 Curly braces inside JSX serve as a bridge between JSX world and JS world. If the expression comess to JSX embraced with cirly beaces, it is interpreted as a request to evaluate the embraced content with a normal JS context established by execution so far.
