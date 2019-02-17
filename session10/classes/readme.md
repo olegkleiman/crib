@@ -30,6 +30,17 @@ console.log(point.x);
 ```
 Along with a *private methods*, the support for a <i>class properties</i> is TC39 [proposal](https://github.com/tc39/proposal-class-fields#private-fields) and only supported only by Babel 7 with [@babel/plugin-proposal-class-properties plugin](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties) and [@babel/plugin-proposal-private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods).
 
+In particular, the example below requires the following .babelrc configuation:
+``` json
+{
+  "presets": ["@babel/preset-env"],
+  "plugins" : [
+      "@babel/plugin-proposal-private-methods",
+      "@babel/plugin-proposal-class-properties",
+  ]
+}
+```
+
 Notes:
 - *constructor* method is called when the object of this type is created.
 - *typeof* operator is almost useless for classes. It only distinguishes object type and primitive types.
