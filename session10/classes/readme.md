@@ -32,6 +32,7 @@ Along with a *private methods*, the support for a <i>class properties</i> is TC3
 
 Notes:
 - *constructor* method is called when the object of this type is created.
+- *typeof* operator is almost useless for classes. It only distinguishes object type and primitive types.
 
 ## 2. Inheritance
 ``` JS
