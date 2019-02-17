@@ -1,6 +1,6 @@
 # JS Classes
 
-JS classes are designed to mimic the OO constructs whenever is possible. This includes encapsulation, inheritance, and polymorphism. Remember, however, that all this JS constructs are just syntax sugar.
+JS classes are designed to mimic the OO constructs whenever is possible. This includes encapsulation, inheritance, and polymorphism. Remember, however, that all this JS constructs are primarily syntactical sugar.
 
 ## 1. Encapsulation
 ``` JS
@@ -28,7 +28,11 @@ const point = new Point(2,3);
 console.log(point.x);
 
 ```
-Along with a <i>private methods</i>, the support for a <i>class properties</i> is TC39 [proposal](https://github.com/tc39/proposal-class-fields#private-fields) and only supported only by Babel 7 with [@babel/plugin-proposal-class-properties plugin](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties) and [@babel/plugin-proposal-private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods).
+Along with a *private methods*, the support for a <i>class properties</i> is TC39 [proposal](https://github.com/tc39/proposal-class-fields#private-fields) and only supported only by Babel 7 with [@babel/plugin-proposal-class-properties plugin](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties) and [@babel/plugin-proposal-private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods).
+
+Notes:
+- *constructor* method is called when the object of this type is created.
+- 
 
 
 ## 2. Inheritance
@@ -53,7 +57,7 @@ console.log(`${marker.text}`);
 ```
 
 ## 3. Polymorphism
-Following the previous example, pay attention to that <i>x</i> is a method of a base class:
+Following the previous example, pay attention to that *x* is a method of a base class:
 ``` JS
 const marker = new Marker('my marker');
 console.log(marker instanceof Point); // true
