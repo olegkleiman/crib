@@ -2,12 +2,13 @@
 
 ## Syllabus
 1. Omnipresent JavaScript
-2. [JS Callbacks](https://github.com/olegkleiman/crib/blob/master/session2/readme.md)
-  * [Native callbacks](https://github.com/olegkleiman/crib/blob/master/session2/nativeCallbacks/readme.md)
+2. JS Callbacks
+  + [Classic Callbacks](https://github.com/olegkleiman/crib/blob/master/session2/readme.md)
+  + [Native callbacks](https://github.com/olegkleiman/crib/blob/master/session2/nativeCallbacks/readme.md)
 3. [Asynchrony in JS](https://github.com/olegkleiman/crib/blob/master/session3/readme.md)
-  * setTimer, setInterval, setImmediate
-  * JSON and networking
-  * fetch
+  + setTimer, setInterval, setImmediate
+  + JSON and networking
+  + fetch
 4. Code complete
   + git and GitHub
   + CIs for GitHub: travis and others
@@ -25,8 +26,8 @@
   + Elasticsearch
   + Realtime updates and Google Firebase
 9. Going Native
-  + 9.1Call JS from Native
-  + 9.2. From Android (Java and Kotlin)
+  + 9.1 Call JS from Native
+  + 9.2 From Android (Java and Kotlin)
   + 9.3 From iOS (Swift)
 10. ES6 and beyond
   + Promises
@@ -44,4 +45,4 @@
   + [React](https://github.com/olegkleiman/crib/blob/master/session13/react/readme.md)
   + Comparing React to other approaches: Angular.js, Vue.js and NativeScript
 14. OpenCV
-   * [Use from iOS (Swift)](https://github.com/olegkleiman/crib/blob/master/session14/iOS/readme.md)
+  + [Use from iOS (Swift)](https://github.com/olegkleiman/crib/blob/master/session14/iOS/readme.md)
