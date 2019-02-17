@@ -32,8 +32,6 @@ Along with a *private methods*, the support for a <i>class properties</i> is TC3
 
 Notes:
 - *constructor* method is called when the object of this type is created.
-- 
-
 
 ## 2. Inheritance
 ``` JS
@@ -62,6 +60,23 @@ Following the previous example, pay attention to that *x* is a method of a base 
 const marker = new Marker('my marker');
 console.log(marker instanceof Point); // true
 console.log(`${marker.text}  ${marker.x}`); 
+```
 
+Class methods may be overloaded:
+``` JS
+class Point {
+  name() {
+    console.log('POINT');
+  }
+};
+
+class Marker extends Point {
+  name() {
+    console.log('MARKER');
+  }
+};
+
+const marker = new Marker();
+marker.name(); // => MARKER
 
 ```
