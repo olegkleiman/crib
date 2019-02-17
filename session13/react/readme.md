@@ -15,9 +15,9 @@ Any code that ends up with returning a React element considered a component. Usu
 ```
 When Babel JSX sees the code like this, it transpiles this code (with a help of Babel) to 
 ``` js
-React.createElement()
+ return React.createElement(...)
 ```
-This essentially leads to defining new object
+This essentially equals to defining new object
 ``` js
  return ({
   type: 'MyComponent',
