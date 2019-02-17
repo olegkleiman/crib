@@ -6,7 +6,7 @@ The most important thing is that each component has the required <i>render()</i>
 
 Reconciliation may render the components' output to HTML but Android, iOS or Occulus screens may also be a target. The promising idea is that the component itself won't know where it is rendering.
 
-Classic React component was expressed with [JS classes](https://github.com/olegkleiman/crib/blob/master/session10/classes/readme.md) but for the last two years React team was working hard to make it possible to make functional components that are regular JS functions a first-class citizen in React realm.
+Classic React component was expressed by [JS classes](https://github.com/olegkleiman/crib/blob/master/session10/classes/readme.md), but for the last two years React team was working hard to make it possible to make the functional components (that are regular JS functions) to a first-class objects in React realm.
 
 ## Functional components
 When JSX sees the code like 
@@ -15,4 +15,4 @@ When JSX sees the code like
 ```
 it ultimately tries to instantiate something that has a <i>render()</i> method. This something shouldn't be a JS class.
  
-
+Curly braces inside JSX serve as a bridge between JSX world and JS world. If the expression comess to JSX embraced with cirly beaces, it is interpreted as a request to evaluate the embraced content with a normal JS context established by execution so far.
