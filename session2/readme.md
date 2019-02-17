@@ -10,7 +10,7 @@ Run this example under NodeJS:
 node --inspect-brk index.js
 node index.js
 ```
-Note that as least as for NddeLS version 8.9.3, no additional efforts needed to support ES6 in this code.
+Note that as least as for Node LS version 8.9.3, no additional efforts needed to support ES6 in this code.
 
 
 The problem with this code is that it includes <code>console.log</code> which is only known to JS Runtime under NodeJS or browser. For other environments, like iOS or Android, we need to mock it somehow.
