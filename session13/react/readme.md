@@ -9,11 +9,11 @@ Reconciliation may render the components' output to HTML but Android, iOS or Occ
 Classic React component was expressed by [JS classes](https://github.com/olegkleiman/crib/blob/master/session10/classes/readme.md), but for the last two years React team was working hard to make it possible to make the functional components (that are regular JS functions) to a first-class objects in React realm.
 
 ## Functional components
-When JSX sees the code like 
+Any code that ends up with returning a React element considered a component. Usually React elements are returned from JSX, like;
 ``` JSX
  return <MyComponent theme='dark' />
 ```
-it transpiles this code (with a help of Babel) to 
+When Babel JSX sees the code like this, it transpiles this code (with a help of Babel) to 
 ``` js
 React.createElement()
 ```
