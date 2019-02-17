@@ -14,6 +14,7 @@ class Point {
   }
   
   get x() { // getter, used here to expose private property
+    this.#say(); // calling private method
     return this.#x;
   }
   
