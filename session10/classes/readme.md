@@ -30,7 +30,7 @@ console.log(point.x);
 ```
 Along with a *private methods*, the support for a <i>class properties</i> is TC39 [proposal](https://github.com/tc39/proposal-class-fields#private-fields) and only supported only by Babel 7 with [@babel/plugin-proposal-class-properties plugin](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties) and [@babel/plugin-proposal-private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods).
 
-In particular, the example below requires the following .babelrc configuation:
+In particular, the example below requires the following .babelrc configuration:
 ``` json
 {
   "presets": ["@babel/preset-env"],
@@ -39,6 +39,10 @@ In particular, the example below requires the following .babelrc configuation:
       "@babel/plugin-proposal-class-properties",
   ]
 }
+```
+Then it should run as:
+```
+npx babel-node script.js
 ```
 
 Notes:
