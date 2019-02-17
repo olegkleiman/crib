@@ -38,7 +38,7 @@ let res = context.evaluateScript(script)
 ```
 Note using Swift 4 [multistring literal support](https://github.com/apple/swift-evolution/blob/master/proposals/0168-multi-line-string-literals.md) in this modified code. Because the callback is not passed in this excerpt, <code>if</code> statement is extended here to <code>else</code> block that is simply return the calculated value. 
 
-Although Java has the [proposal](https://blog.joda.org/2008/01/java-7-multi-line-string-literals_594.html) for multiline string support, but under Android, it hasn't been implemented yet, so out <b>Java</b> code might looks like:
+Although Java has the [proposal](https://blog.joda.org/2008/01/java-7-multi-line-string-literals_594.html) for multiline string support, but under Android it hasn't been implemented yet, so out **Java** code might looks like:
 ``` Java 
 import com.eclipsesource.v8.V8;
 ...
@@ -57,7 +57,7 @@ Integer res = runtime.executeIntegerScript(
 ```
 The excepted return will be the same as in Swift case, although iOS expoits JavaSciptCore as JS Engine and Java under Android used V8 Engine.
 
-<b>Kotlin</b> in this case is only different on by its more modern syntax:
+**Kotlin** in this case is only different on by its more modern syntax:
 ``` Kotlin
 import com.eclipsesource.v8.V8
 ...
