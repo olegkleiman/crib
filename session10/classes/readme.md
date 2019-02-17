@@ -16,6 +16,10 @@ class Point {
   get x() { // getter, used here to expose private property
     return this.#x;
   }
+  
+   #say(){ // private method
+    console.log(`i'm private`)
+  }
 
 };
 
